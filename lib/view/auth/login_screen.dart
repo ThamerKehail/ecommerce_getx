@@ -1,4 +1,5 @@
 import 'package:ecommerce/const.dart';
+import 'package:ecommerce/view/auth/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -26,7 +27,15 @@ class LoginScreen extends GetWidget<AuthViewModel> {
                     "Welcome",
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
-                  Text("Signup", style: TextStyle(color: primaryColor)),
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(() => RegisterScreen());
+                    },
+                    child: Text(
+                      "Signup",
+                      style: TextStyle(color: primaryColor),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(height: 50),
